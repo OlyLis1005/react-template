@@ -1,15 +1,13 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import './App.css'
+import Router from "./router"
+import routes from "./router/routes"
+import {Link} from "react-router-dom"
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
+      <div className="app-header">
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -18,9 +16,19 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </div>
+      <nav>
+        {
+          routes.map(({path, name}) =>
+            <Link key={path} to={path} style={{marginRight: '10px'}}>{name}</Link>
+          )
+        }
+      </nav>
+      <div className="app-content">
+        <Router/>
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
