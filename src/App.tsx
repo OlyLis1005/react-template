@@ -3,6 +3,7 @@ import './App.css'
 import Router from "./router"
 import routes from "./router/routes"
 import {Link} from "react-router-dom"
+import SideMenu from './components/side-menu'
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           )
         }
       </nav>
+      <SideMenu/>
       <div className="app-content">
         <Router/>
       </div>

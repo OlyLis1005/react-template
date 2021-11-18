@@ -14,6 +14,7 @@ const config = {
         filename: envDevelopment ? 'js/[name].js' : "js/[name].[chunkhash:5].js",
         publicPath: project.publicPath
     },
+
 }
 
 export default config
