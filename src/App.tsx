@@ -1,5 +1,5 @@
 import React from 'react'
-import './App.css'
+import './App.less'
 import Router from "./router"
 import routes from "./router/routes"
 import {Link} from "react-router-dom"
