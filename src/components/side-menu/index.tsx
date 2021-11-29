@@ -11,7 +11,7 @@ class SideMenu extends Component<IProps> {
     collapsed: false,
   }
 
-  triggerCollapse = () => {
+  toggleCollapse = () => {
     this.setState((preState: any) => {
       return {
         collapsed: !preState.collapsed
@@ -25,7 +25,7 @@ class SideMenu extends Component<IProps> {
     } = this.state
     return (
       <div className={`side-menu${collapsed ? ' collapsed' : ''}`}>
-        <div className="collapse-btn" onClick={this.triggerCollapse}>
+        <div className="collapse-btn" onClick={this.toggleCollapse}>
           {
             collapsed ? <MenuUnfoldOutlined/> : <MenuFoldOutlined/>
           }
